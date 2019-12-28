@@ -4,7 +4,6 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
-             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              mc:Ignorable="d"
              x:Class="Sky.Tab2_Discover.DiscoverBasePage">
     <ContentPage.Resources>
@@ -165,8 +164,19 @@
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
 
-                                <Image Grid.Row="0" Source="tab2_discover_hotels_example1.png" Aspect="AspectFill" HeightRequest="300"/>
-                                <Label Grid.Row="0" Text="$10.00" TextColor="White" HorizontalOptions="End" FontSize="15"/>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80*"/>
+                                    <ColumnDefinition Width="20*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Source="tab2_discover_hotels_example1.png" Aspect="AspectFill" HeightRequest="300"/>
+                                <Label Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#431C60"
+                                        TextColor="White" FontSize="20" FontFamily="Runda"
+                                        VerticalOptions="Start" HorizontalOptions="End"
+                                        VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                        Margin="0,50,0,0"
+                                        Padding="10"
+                                        Text="$10.00"/>
                             </Grid>
 
                             <StackLayout Orientation="Vertical" Margin="10,0,0,20">
@@ -185,8 +195,19 @@
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
 
-                                <Image Grid.Row="0" Source="tab2_discover_hotels_example2.png" Aspect="AspectFill" HeightRequest="300"/>
-                                <Label Grid.Row="0" Text="$20.00" TextColor="White" HorizontalOptions="End" FontSize="15"/>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80*"/>
+                                    <ColumnDefinition Width="20*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Source="tab2_discover_hotels_example2.png" Aspect="AspectFill" HeightRequest="300"/>
+                                <Label Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#431C60"
+                                        TextColor="White" FontSize="20" FontFamily="Runda"
+                                        VerticalOptions="Start" HorizontalOptions="End"
+                                        VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                        Margin="0,50,0,0"
+                                        Padding="10"
+                                        Text="$20.00"/>
                             </Grid>
 
                             <StackLayout Orientation="Vertical" Margin="10,0,0,20">
@@ -204,8 +225,19 @@
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
 
-                                <Image Grid.Row="0" Source="tab2_discover_hotels_example3.png" Aspect="AspectFill" HeightRequest="300"/>
-                                <Label Grid.Row="0" Text="$30.00" TextColor="White" HorizontalOptions="End" FontSize="15"/>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80*"/>
+                                    <ColumnDefinition Width="20*"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Image  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Source="tab2_discover_hotels_example3.png" Aspect="AspectFill" HeightRequest="300"/>
+                                <Label Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#431C60"
+                                        TextColor="White" FontSize="20" FontFamily="Runda"
+                                        VerticalOptions="Start" HorizontalOptions="End"
+                                        VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                        Margin="0,50,0,0"
+                                        Padding="10"
+                                        Text="$30.00"/>
                             </Grid>
 
                             <StackLayout Orientation="Vertical" Margin="10,0,0,20">
@@ -224,8 +256,19 @@
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
 
-                                <Image Grid.Row="0" Source="tab2_discover_hotels_example4.png" Aspect="AspectFill" HeightRequest="300"/>
-                                <Label Grid.Row="0" Text="$40.00" TextColor="White" HorizontalOptions="End" FontSize="15"/>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80*"/>
+                                    <ColumnDefinition Width="20*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Source="tab2_discover_hotels_example4.png" Aspect="AspectFill" HeightRequest="300"/>
+                                <Label Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#431C60"
+                                        TextColor="White" FontSize="20" FontFamily="Runda"
+                                        VerticalOptions="Start" HorizontalOptions="End"
+                                        VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                        Margin="0,50,0,0"
+                                        Padding="10"
+                                        Text="$40.00"/>
                             </Grid>
 
                             <StackLayout Orientation="Vertical" Margin="10,0,0,20">

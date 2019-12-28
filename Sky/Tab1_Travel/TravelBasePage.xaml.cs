@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sky.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,34 @@ namespace Sky.Tab1_Travel
             Title = title;
         }
 
+        private void ButtonPressed_ViewBoardingPass(object sender, EventArgs e)
+        {
+            PopupHelper.ShowAlertDialog("TravelBasePage", "Button pressed - View boarding pass", this);
+        }
 
+        private void ButtonPressed_Travel_NumberOfNights(object sender, EventArgs e)
+        {
+            PopupHelper.ShowAlertDialog("TravelBasePage", "Button pressed - 4 nights", this);
+        }
+
+        private void ButtonPressed_AddPlans(object sender, EventArgs e)
+        {
+            PopupHelper.ShowAlertDialog("TravelBasePage", "Button pressed - Add plans", this);
+        }
+
+        private void ButtonPressed_ChangeSource(object sender, EventArgs e)
+        {
+            PopupHelper.ShowAlertDialog("TravelBasePage", "Button pressed - Change source", this);
+        }
+
+        private void ButtonPressed_ChangeDestination(object sender, EventArgs e)
+        {
+            PopupHelper.ShowAlertDialog("TravelBasePage", "Button pressed - Change destination", this);
+        }
+
+        private void ButtonPressed_AddTravel(object sender, EventArgs e)
+        {
+            PopupHelper.ShowAlertDialog("TravelBasePage", "Button pressed - Pick travel", this);
+        }
     }
 }

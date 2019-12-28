@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sky.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,21 @@ namespace Sky.Tab2_Discover
         public FullPlaceContentPage()
         {
             InitializeComponent();
+        }
+
+        private void ButtonPressed_BookPlace(object sender, EventArgs e)
+        {
+            PopupHelper.ShowAlertDialog("TravelBasePage", "Button pressed - Book place", this);
+        }
+
+        private void ButtonPressed_DatePicker(object sender, EventArgs e)
+        {
+            PopupHelper.ShowAlertDialog("TravelBasePage", "Button pressed - Pick a date", this);
+        }
+
+        private void ButtonPressed_AddFavorite(object sender, EventArgs e)
+        {
+            PopupHelper.ShowAlertDialog("TravelBasePage", "Button pressed - Add favorite", this);
         }
     }
 }

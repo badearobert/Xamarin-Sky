@@ -3,13 +3,175 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
              mc:Ignorable="d"
              x:Class="Sky.Tab2_Discover.FullPlaceContentPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button" x:Key="AvailableTimeButtonStyle">
+                <Setter Property="BackgroundColor" Value="#431C60"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="VerticalOptions" Value="Fill"/>
+            </Style>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Spacing="0" Grid.Row="0">
+                <magic:GradientView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <magic:GradientView.GradientSource>
+                        <magic:LinearGradient Angle="180">
+                            <magic:GradientStop Color="#261136" Offset="0" />
+                            <magic:GradientStop Color="#261136" Offset="1" />
+                        </magic:LinearGradient>
+                    </magic:GradientView.GradientSource>
+                </magic:GradientView>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Vertical" >
+                
+                <StackLayout Orientation="Vertical">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image x:Name="Background_Image" Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="2"
+                       Source="tab2_discover_placestovisit_example4.png"
+                       Aspect="AspectFill"
+                       WidthRequest="375"
+                       HeightRequest="342"
+                       />
+
+                        <StackLayout 
+                        Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+                        Orientation="Vertical" BackgroundColor="#272727">
+                            <Image Source="tab2_discover_places_button_addfavorites.png"
+                                   Grid.Row="0" Grid.Column="1"
+                                   Margin="0,-32,32,0"
+                                   HorizontalOptions="End" VerticalOptions="End"
+                                   WidthRequest="64" HeightRequest="64">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ButtonPressed_AddFavorite"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+
+
+
+                        <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Vertical" Margin="30,30,0,0">
+                            <Label Text="$25.50" TextColor="#8BC34A " FontSize="30" HorizontalTextAlignment="Center"/>
+                            <Button BackgroundColor="#431C60" TextColor="White" Text="PICK A DATE" Pressed="ButtonPressed_DatePicker"></Button>
+
+                        </StackLayout>
+                        <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Vertical" Margin="20,20,0,20">
+                            <Label Text="Tips" TextColor="White" FontSize="20" />
+
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="tab2_discover_places_wifi.png" WidthRequest="16" HeightRequest="16"/>
+                                <Label Text="Free Ferry Wifi" TextColor="White" FontSize="14" />
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="tab2_discover_places_boat.png" WidthRequest="16" HeightRequest="16"/>
+                                <Label Text="Boats leave every 20 mins." TextColor="White" FontSize="14" />
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="tab2_discover_places_timer.png" WidthRequest="16" HeightRequest="16"/>
+                                <Label Text="Less busy before 2pm." TextColor="White" FontSize="14" />
+                            </StackLayout>
+                        </StackLayout>
+
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" Margin="20,10"
+                             HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                             >
+                    <Grid ColumnSpacing="5" RowSpacing="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="Choose an available time" TextColor="White" FontSize="16"/>
+                        <Button Grid.Column="0" Grid.Row="1" Style="{StaticResource AvailableTimeButtonStyle}" Text="08.30"></Button>
+                        <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource AvailableTimeButtonStyle}" Text="13.15"></Button>
+                        <Button Grid.Column="1" Grid.Row="1" Style="{StaticResource AvailableTimeButtonStyle}" Text="09.15"></Button>
+                        <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource AvailableTimeButtonStyle}" Text="14.40"></Button>
+                        <Button Grid.Column="2" Grid.Row="1" Style="{StaticResource AvailableTimeButtonStyle}" Text="09.45"></Button>
+                        <Button Grid.Column="2" Grid.Row="2" Style="{StaticResource AvailableTimeButtonStyle}" Text="15.10"></Button>
+                        <Button Grid.Column="3" Grid.Row="1" Style="{StaticResource AvailableTimeButtonStyle}" Text="12.40"></Button>
+                        <Button Grid.Column="3" Grid.Row="2" Style="{StaticResource AvailableTimeButtonStyle}" Text="15.30"></Button>
+
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" Margin="5,0,0,0">
+                    <Grid RowSpacing="0" ColumnSpacing="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Column="0" Source="tab2_discover_placestovisit_example1.png" Aspect="AspectFill"/>
+                        <Image Grid.Column="1" Source="tab2_discover_placestovisit_example2.png" Aspect="AspectFill"/>
+                        <Image Grid.Column="2" Source="tab2_discover_placestovisit_example3.png" Aspect="AspectFill"/>
+                        <Image Grid.Column="3" Source="tab2_discover_placestovisit_example4.png" Aspect="AspectFill"/>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical">
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Spacing="0" Grid.Row="0" Grid.RowSpan="2">
+                            <magic:GradientView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <magic:GradientView.GradientSource>
+                                    <magic:LinearGradient Angle="270">
+                                        <magic:GradientStop Color="#4527A0" Offset="0" />
+                                        <magic:GradientStop Color="#7B1FA2" Offset="1" />
+                                    </magic:LinearGradient>
+                                </magic:GradientView.GradientSource>
+                            </magic:GradientView>
+                        </StackLayout>
+
+                        <Label Margin="0,5,0,0" Grid.Row="0" Text="BOOK THIS FOR" TextColor="White" HorizontalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ButtonPressed_BookPlace"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label Grid.Row="1" Text="$25.50" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"/>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
 </ContentPage>

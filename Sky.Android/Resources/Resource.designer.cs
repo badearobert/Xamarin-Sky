@@ -5841,32 +5841,44 @@ namespace Sky.Droid
 			// aapt resource value: 0x7F070085
 			public const int tab2_discover_hotels_example4 = 2131165317;
 			
-			// aapt resource value: 0x7F070086
-			public const int tab2_discover_placestovisit_example1 = 2131165318;
-			
-			// aapt resource value: 0x7F070087
-			public const int tab2_discover_placestovisit_example2 = 2131165319;
-			
-			// aapt resource value: 0x7F070088
-			public const int tab2_discover_placestovisit_example3 = 2131165320;
-			
-			// aapt resource value: 0x7F070089
-			public const int tab2_discover_placestovisit_example4 = 2131165321;
-			
 			// aapt resource value: 0x7F07008A
-			public const int tab2_discover_rating = 2131165322;
+			public const int tab2_discover_placestovisit_example1 = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int tab3_travellers = 2131165323;
+			public const int tab2_discover_placestovisit_example2 = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int tab4_favorites = 2131165324;
+			public const int tab2_discover_placestovisit_example3 = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int tooltip_frame_dark = 2131165325;
+			public const int tab2_discover_placestovisit_example4 = 2131165325;
+			
+			// aapt resource value: 0x7F070086
+			public const int tab2_discover_places_boat = 2131165318;
+			
+			// aapt resource value: 0x7F070087
+			public const int tab2_discover_places_button_addfavorites = 2131165319;
+			
+			// aapt resource value: 0x7F070088
+			public const int tab2_discover_places_timer = 2131165320;
+			
+			// aapt resource value: 0x7F070089
+			public const int tab2_discover_places_wifi = 2131165321;
 			
 			// aapt resource value: 0x7F07008E
-			public const int tooltip_frame_light = 2131165326;
+			public const int tab2_discover_rating = 2131165326;
+			
+			// aapt resource value: 0x7F07008F
+			public const int tab3_travellers = 2131165327;
+			
+			// aapt resource value: 0x7F070090
+			public const int tab4_favorites = 2131165328;
+			
+			// aapt resource value: 0x7F070091
+			public const int tooltip_frame_dark = 2131165329;
+			
+			// aapt resource value: 0x7F070092
+			public const int tooltip_frame_light = 2131165330;
 			
 			static Drawable()
 			{

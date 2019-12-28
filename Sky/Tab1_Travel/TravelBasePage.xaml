@@ -18,18 +18,21 @@
             </Style>
 
             <Style TargetType="Label" x:Key="Boarding_Info_Labels" BasedOn="{StaticResource StyleCentered}">
-                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontFamily" Value="Runda"/>
                 <Setter Property="TextColor" Value="White"/>
                 <Setter Property="WidthRequest" Value="400"/>
-                <Setter Property="HeightRequest" Value="20"/>
-                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HeightRequest" Value="32"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
                 <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="1,1"/>
                 <Setter Property="Padding" Value="10,0"/>
             </Style>
 
             <Style TargetType="Label" x:Key="FlightInfo_Labels" BasedOn="{StaticResource StyleCentered}">
                 <Setter Property="TextColor" Value="Gray"/>
-                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="FontSize" Value="11"/>
+                <Setter Property="FontFamily" Value="Runda"/>
             </Style>
             <Style TargetType="Label" x:Key="FlightInfo_Data" BasedOn="{StaticResource StyleCentered}">
                 <Setter Property="TextColor" Value="White"/>
@@ -39,15 +42,32 @@
 
             <Style TargetType="Label" x:Key="FlightInfo_Heading" BasedOn="{StaticResource StyleCentered}">
                 <Setter Property="TextColor" Value="White"/>
-                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontSize" Value="35"/>
+                <Setter Property="FontFamily" Value="Runda"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
             </Style>
 
             <Style TargetType="Label" x:Key="FlightInfo_Heading_Small" BasedOn="{StaticResource StyleCentered}">
                 <Setter Property="TextColor" Value="Gray"/>
-                <Setter Property="FontSize" Value="10"/>
-                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="11"/>
+                <Setter Property="FontFamily" Value="Runda"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="Margin" Value="5,0"/>
+                <Setter Property="LineBreakMode" Value="WordWrap"/>
+                <Setter Property="MaxLines" Value="10"/>
             </Style>
 
+            <Style TargetType="Label" x:Key="Title">
+                <Setter Property="FontSize" Value="36"/>
+                <Setter Property="FontFamily" Value="Runda"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="Margin" Value="20,-100,0,0"/>
+
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -75,72 +95,88 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <Image Grid.Row="0" Source="tab1_travel_background_image_top.png" Aspect="Fill" VerticalOptions="Start" HeightRequest="250"/>
-                    <Label Grid.Row="0" Text="Let's get you there..." FontSize="24" VerticalOptions="Center" WidthRequest="120" HorizontalOptions="Start" TextColor="White" Margin="20,-100,0,0"/>
+                    <Image Grid.Row="0" Source="tab1_travel_background_image_top.png" Aspect="Fill" VerticalOptions="Start" HeightRequest="368"/>
+                    <Label Grid.Row="0" Text="Let's get you there..." Style="{StaticResource Title}"/>
 
                 </Grid>
             </StackLayout>
 
         <StackLayout x:Name="BoardingCardInfo" Orientation="Vertical" Margin="20,-130,20,0">
-            <Frame BackgroundColor="#232323" BorderColor="Red" HasShadow="True" Opacity="0.9">
-                <Grid MinimumHeightRequest="250" ColumnSpacing="0" RowSpacing="10">
+            
+            <Frame BackgroundColor="#232323" BorderColor="Red" HasShadow="True" Opacity="0.9" Padding="0,0,0,0">
+                <Grid ColumnSpacing="0" RowSpacing="10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
 
-                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Boarding now" Style="{StaticResource Boarding_Info_Labels}" BackgroundColor="Green" HorizontalOptions="Start"/>
-                    <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Text="Gate closes at 10:00" Style="{StaticResource Boarding_Info_Labels}" BackgroundColor="Black" HorizontalOptions="End" HorizontalTextAlignment="End"/>
+                            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="BOARDING NOW" Style="{StaticResource Boarding_Info_Labels}" BackgroundColor="#8BC34A" HorizontalOptions="Start"/>
+                            <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Text="GATE CLOSES AT 10:00" Style="{StaticResource Boarding_Info_Labels}" BackgroundColor="Black" HorizontalOptions="End" HorizontalTextAlignment="End"/>
 
-                    <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource FlightInfo_Heading}" Text="LHR"/>
-                    <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource FlightInfo_Heading_Small}" Text="London, England" />
+                            <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource FlightInfo_Heading}" Text="LHR"/>
+                            <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource FlightInfo_Heading_Small}" Text="London, England" />
 
-                    <Image Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Source="tab1_travel.png" Aspect="Fill" WidthRequest="25" HeightRequest="25" />
+                            <Image Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Source="tab1_travel.png" Aspect="Fill" WidthRequest="25" HeightRequest="25" />
 
-                    <Label Grid.Row="1" Grid.Column="3" Style="{StaticResource FlightInfo_Heading}" Text="JFK"/>
-                    <Label Grid.Row="2" Grid.Column="3" Style="{StaticResource FlightInfo_Heading_Small}" Text="New York City, USA"/>
+                            <Label Grid.Row="1" Grid.Column="3" Style="{StaticResource FlightInfo_Heading}" Text="JFK"/>
+                            <Label Grid.Row="2" Grid.Column="3" Style="{StaticResource FlightInfo_Heading_Small}" Text="New York City, USA"/>
 
-                    <Image Grid.Row="3" Grid.ColumnSpan="4" BackgroundColor="Gray" Aspect="Fill" />
-
-
-                    <Label Grid.Row="4" Grid.Column="0" Style="{StaticResource FlightInfo_Labels}" Text="FLIGHT"/>
-                    <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource FlightInfo_Labels}" Text="SEAT"/>
-                    <Label Grid.Row="4" Grid.Column="3" Style="{StaticResource FlightInfo_Labels}" Text="GATE"/>
+                            <Image Grid.Row="3" Grid.ColumnSpan="4" BackgroundColor="Gray" Margin="10,10" HeightRequest="1" />
 
 
-                    <Label Grid.Row="5" Grid.Column="0" Style="{StaticResource FlightInfo_Data}" Text="VA2501"/>
-                    <Label Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource FlightInfo_Data}" Text="35A"/>
-                    <Label Grid.Row="5" Grid.Column="3" Style="{StaticResource FlightInfo_Data}" Text="34B"/>
+                            <Label Grid.Row="4" Grid.Column="0" Style="{StaticResource FlightInfo_Labels}" Text="FLIGHT"/>
+                            <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource FlightInfo_Labels}" Text="SEAT"/>
+                            <Label Grid.Row="4" Grid.Column="3" Style="{StaticResource FlightInfo_Labels}" Text="GATE"/>
 
-                    <Label Grid.Row="6" Grid.Column="0" Style="{StaticResource FlightInfo_Labels}" Text="DEPARTS"/>
-                    <Label Grid.Row="7" Grid.Column="0" Style="{StaticResource FlightInfo_Data}" Text="10.25"/>
 
-                    <Button Grid.Row="6" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="3" Text="View Boarding Pass"></Button>
+                            <Label Grid.Row="5" Grid.Column="0" Style="{StaticResource FlightInfo_Data}" Text="VA2501"/>
+                            <Label Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource FlightInfo_Data}" Text="35A"/>
+                            <Label Grid.Row="5" Grid.Column="3" Style="{StaticResource FlightInfo_Data}" Text="34B"/>
 
-                </Grid>
+                            <Label Grid.Row="6" Grid.Column="0" Style="{StaticResource FlightInfo_Labels}" Text="DEPARTS" VerticalOptions="EndAndExpand"/>
+                            <Label Grid.Row="7" Grid.Column="0" Style="{StaticResource FlightInfo_Data}" Text="10.25" VerticalOptions="Start"/>
+
+
+                            <Label Grid.Row="6" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="3" BackgroundColor="#431C60"
+                        TextColor="White" FontSize="14" FontFamily="Runda"
+                        VerticalOptions="Fill" HorizontalOptions="Fill"
+                        VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                        Margin="20,0,20,20"
+                        Text="View Boarding Pass">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ButtonPressed_ViewBoardingPass"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                    
+                        </Grid>
             </Frame>
         </StackLayout>
 
 
 
         <StackLayout x:Name="YourPlans" Orientation="Horizontal" Style="{StaticResource StylePageMargin}">
-            <Label Text="Your plans" VerticalOptions="Center" FontSize="24" TextColor="#AAB5E0"/>
-            <Image Source="tab1_travel_yourplans_button_add.png" HorizontalOptions="EndAndExpand" VerticalOptions="Center" WidthRequest="50" HeightRequest="50" />
+                    <Label Text="Your plans" VerticalOptions="Center" FontSize="24" TextColor="#AAB5E0"/>
+                    <Image Source="tab1_travel_yourplans_button_add.png" HorizontalOptions="EndAndExpand" VerticalOptions="Center" WidthRequest="50" HeightRequest="50">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ButtonPressed_AddPlans"/>
+                        </Image.GestureRecognizers>
+                    </Image>
 
-        </StackLayout>
+                </StackLayout>
 
         <StackLayout x:Name="YourPlans_Accomodation" Orientation="Vertical" BackgroundColor="#431C60" Style="{StaticResource StylePageMargin}">
                 <StackLayout Orientation="Vertical">
@@ -171,8 +207,14 @@
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
                                 <Image Grid.Row="0" Source="tab1_travel_button_image.png" VerticalOptions="Center" WidthRequest="64" HeightRequest="32" />
-                                <Label Grid.Row="0" Text="4 NIGHTS" TextColor="White" FontSize="10" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
-                            </Grid>
+                                    <Label Grid.Row="0" Text="4 NIGHTS" TextColor="White" FontSize="10" FontAttributes="Bold" 
+                                       HorizontalOptions="Center" VerticalOptions="Center">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="ButtonPressed_Travel_NumberOfNights"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+
+                                </Grid>
                         </StackLayout>
                         
                         <Image Grid.Row="5" BackgroundColor="Gray" Aspect="Fill" Margin="20,0"/>
@@ -237,8 +279,16 @@
                         <Label Text="New York, NY 10018" HorizontalOptions="Start" FontSize="8" TextColor="White" FontAttributes="Bold"/>
                     </StackLayout>
 
-                <Image Grid.Row="1" Grid.Column="2" Margin="0,0,20,0" Source="tab1_travel_button_edit.png" WidthRequest="36" HeightRequest="36" VerticalOptions="Start"/>
-                    <Image Grid.Row="2" Grid.Column="2" Margin="0,0,20,0" Source="tab1_travel_button_edit.png" WidthRequest="36" HeightRequest="36" VerticalOptions="Start"/>
+                        <Image Grid.Row="1" Grid.Column="2" Margin="0,0,20,0" Source="tab1_travel_button_edit.png" WidthRequest="36" HeightRequest="36" VerticalOptions="Start">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ButtonPressed_ChangeSource"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Grid.Row="2" Grid.Column="2" Margin="0,0,20,0" Source="tab1_travel_button_edit.png" WidthRequest="36" HeightRequest="36" VerticalOptions="Start">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ButtonPressed_ChangeDestination"/>
+                            </Image.GestureRecognizers>
+                        </Image>
                 </Grid>
             </StackLayout>
 
@@ -319,25 +369,41 @@
                                 </Grid.ColumnDefinitions>
 
                                 <StackLayout Grid.Column="0" Orientation="Vertical" WidthRequest="500">
-                                    <Image Source="tab1_travel_yourplans_button_add.png"  WidthRequest="50" HeightRequest="50" />
-                                    <Label Text="$65-$105" HorizontalTextAlignment="Center"/>
-                                    <Label Text="TAXI" HorizontalTextAlignment="Center"/>
+                                    <Image Source="tab1_travel_yourplans_button_add.png"  WidthRequest="50" HeightRequest="50">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="ButtonPressed_AddTravel"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                        <Label Text="$65-$105" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold"/>
+                                        <Label Text="TAXI" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold"/>
                                 </StackLayout>
 
                                 <StackLayout Grid.Column="1" Orientation="Vertical" >
-                                    <Image Source="tab1_travel_yourplans_button_add.png" WidthRequest="50" HeightRequest="50" />
-                                    <Label Text="$65-$105" HorizontalTextAlignment="Center"/>
-                                    <Label Text="SUBWAY" HorizontalTextAlignment="Center"/>
+                                    <Image Source="tab1_travel_yourplans_button_add.png" WidthRequest="50" HeightRequest="50">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="ButtonPressed_AddTravel"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                    <Label Text="$20-$30" HorizontalTextAlignment="Center" TextColor="#B9B9B9"/>
+                                    <Label Text="SUBWAY" HorizontalTextAlignment="Center" TextColor="#B9B9B9"/>
                                 </StackLayout>
                                 <StackLayout Grid.Column="2" Orientation="Vertical" >
-                                    <Image Source="tab1_travel_yourplans_button_add.png" WidthRequest="50" HeightRequest="50" />
-                                    <Label Text="$65-$105" HorizontalTextAlignment="Center"/>
-                                    <Label Text="UBER" HorizontalTextAlignment="Center"/>
+                                    <Image Source="tab1_travel_yourplans_button_add.png" WidthRequest="50" HeightRequest="50">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="ButtonPressed_AddTravel"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                    <Label Text="$45-$65" HorizontalTextAlignment="Center" TextColor="#B9B9B9"/>
+                                    <Label Text="UBER" HorizontalTextAlignment="Center" TextColor="#B9B9B9"/>
                                 </StackLayout>
                                 <StackLayout Grid.Column="3" Orientation="Vertical" >
-                                    <Image Source="tab1_travel_yourplans_button_add.png"  WidthRequest="50" HeightRequest="50" />
-                                    <Label Text="$65-$105" HorizontalTextAlignment="Center"/>
-                                    <Label Text="UBER" HorizontalTextAlignment="Center"/>
+                                    <Image Source="tab1_travel_yourplans_button_add.png"  WidthRequest="50" HeightRequest="50">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="ButtonPressed_AddTravel"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                    <Label Text="$45-$65" HorizontalTextAlignment="Center" TextColor="#B9B9B9"/>
+                                    <Label Text="UBER" HorizontalTextAlignment="Center" TextColor="#B9B9B9"/>
                                 </StackLayout>
                             </Grid>
                         </StackLayout>
