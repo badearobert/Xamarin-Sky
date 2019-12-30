@@ -10,7 +10,7 @@ namespace Sky
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new Intro.InitialPage());
         }
 
         protected override void OnStart()
