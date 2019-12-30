@@ -13,20 +13,35 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+                    <RelativeLayout>
+                        <Image x:Name="BackgroundImage" Grid.Row="0" 
+                               Source="tab2_discover_article_example1.png" 
+                               Opacity="0.8"
+                               Aspect="AspectFill"
+                               WidthRequest="375" HeightRequest="256"
+                               VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
 
-                <Image Grid.Row="0" Source="tab2_discover_article_example1.png" 
-                       Aspect="AspectFill"
-                       WidthRequest="375" HeightRequest="256"
-                       VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                        <StackLayout Orientation="Horizontal"
+                                     Margin="32,-72,0,0"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, ElementName=BackgroundImage, Property=Height, Factor=1}"
+                                     >
 
-                <Image Grid.Row="0" BackgroundColor="Black" Opacity="0.0"
-                       Aspect="AspectFill"
-                       VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
-            </Grid>
+                            <Image x:Name="ProfilePicture" Source="tab2_discover_profilepicture_small.png" 
+                               WidthRequest="40" HeightRequest="40"/>
+                            <StackLayout Orientation="Vertical" >
+                                <Label Text="Sarah Parmenter" TextColor="White" FontSize="11" VerticalOptions="EndAndExpand" VerticalTextAlignment="Center"/>
+                                <Label Text="THINGS TO DO" TextColor="White" FontSize="11" Opacity="60" VerticalOptions="StartAndExpand" VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+
+
+
+                    </RelativeLayout>
+        </Grid>
         </StackLayout>
         <StackLayout x:Name="Text" Orientation="Vertical" Margin="20,25">
             <Label Text="How to find the best photography spots in Brooklyn."
-                   FontSize="30" TextColor="White"
+                   FontSize="26" TextColor="White"
                    />
             <Label Margin="0,15" FontSize="18"  TextColor="White"
                 Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor sapien diam, nec ultrices lectus bibendum vitae. Aenean scelerisque neque ut nunc elementum, at gravida turpis fermentum. Sed tempor aliquam vulputate. Morbi luctus odio quis tortor pretium, ac sagittis neque tempus. Nullam eget vehicula mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi risus quam, dignissim non convallis in, laoreet nec sapien. Curabitur fringilla ut nulla eu elementum. Nam risus nulla, pellentesque eu felis a, rhoncus porta dui. Sed in enim magna. Aenean non cursus enim.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor sapien diam, nec ultrices lectus bibendum vitae. Aenean scelerisque neque ut nunc elementum, at gravida turpis fermentum. Sed tempor aliquam vulputate. Morbi luctus odio quis tortor pretium, ac sagittis neque tempus. Nullam eget vehicula mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi risus quam, dignissim non convallis in, laoreet nec sapien. Curabitur fringilla ut nulla eu elementum. Nam risus nulla, pellentesque eu felis a, rhoncus porta dui. Sed in enim magna. Aenean non cursus enim."/>
