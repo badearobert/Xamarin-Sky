@@ -7,6 +7,22 @@
              mc:Ignorable="d"
              x:Class="Sky.Tab3_Travellers.ProfileTabContentPage">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button" x:Key="StyleButton">
+                <Setter Property="TextColor" Value="#A648EB"/>
+                <Setter Property="BackgroundColor" Value="#431C60"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+            <Style TargetType="Button" x:Key="StyleButtonPressed">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="#431C60"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
     <Grid RowSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -38,7 +54,7 @@
 
 
         <StackLayout Grid.Row="1" Orientation="Vertical">
-            <Grid>
+            <Grid ColumnSpacing="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
@@ -49,10 +65,11 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Row="0" Grid.Column="0" Text="ABOUT" Clicked="ButtonPress_About"/>
-                <Button Grid.Row="0" Grid.Column="1" Text="FAVOURITES" Clicked="ButtonPress_Favourites"/>
-                <Button Grid.Row="0" Grid.Column="2" Text="GALLERY" Clicked="ButtonPress_Gallery"/>
-
+                <StackLayout Orientation="Horizontal" BackgroundColor="#431C60" Grid.ColumnSpan="3">
+                <Button x:Name="ButtonAbout" Grid.Row="0" Grid.Column="0" Text="ABOUT" Style="{StaticResource StyleButton}" Clicked="ButtonPress_About"/>
+                <Button x:Name="ButtonFavourites" Grid.Row="0" Grid.Column="1" Text="FAVOURITES" Style="{StaticResource StyleButton}" Clicked="ButtonPress_Favourites"/>
+                <Button x:Name="ButtonGallery" Grid.Row="0" Grid.Column="2" Text="GALLERY" Style="{StaticResource StyleButton}" Clicked="ButtonPress_Gallery"/>
+                </StackLayout>
                 <ScrollView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <StackLayout x:Name="MyStackLayout">
                     <!-- Will be inserted dynamically -->

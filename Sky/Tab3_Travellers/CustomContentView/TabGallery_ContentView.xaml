@@ -6,47 +6,46 @@
              mc:Ignorable="d"
              x:Class="Sky.Tab3_Travellers.CustomContentView.TabGallery_ContentView">
 
-    <StackLayout BackgroundColor="LightSlateGray">
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
-        <Label Text="kjhkjhkjhk"/>
+    <StackLayout Orientation="Horizontal">
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Image Grid.Row="0" Grid.Column="0" Source="tab2_discover_placestovisit_example1.png" HeightRequest="128" Aspect="Fill"/>
+            <Image Grid.Row="0" Grid.Column="1" Source="tab2_discover_placestovisit_example2.png" HeightRequest="128" Aspect="Fill"/>
+            <Image Grid.Row="0" Grid.Column="2" Source="tab2_discover_placestovisit_example1.png" HeightRequest="128" Aspect="Fill"/>
+            <Image Grid.Row="0" Grid.Column="3" Source="tab2_discover_placestovisit_example2.png" HeightRequest="128" Aspect="Fill"/>
+
+            <Image Grid.Row="1" Grid.Column="0" Source="tab2_discover_placestovisit_example2.png" HeightRequest="128" Aspect="Fill"/>
+            <Image Grid.Row="1" Grid.Column="1" Source="tab2_discover_placestovisit_example1.png" HeightRequest="128" Aspect="Fill"/>
+            <Image Grid.Row="1" Grid.Column="2" Source="tab2_discover_placestovisit_example2.png" HeightRequest="128" Aspect="Fill"/>
+            <Image Grid.Row="1" Grid.Column="3" Source="tab2_discover_placestovisit_example1.png" HeightRequest="128" Aspect="Fill"/>
+            
+            <Image Grid.Row="2" Grid.Column="0" Source="tab2_discover_placestovisit_example1.png" HeightRequest="128" Aspect="Fill"/>
+            <Image Grid.Row="2" Grid.Column="1" Source="tab2_discover_placestovisit_example2.png" HeightRequest="128" Aspect="Fill"/>
+            <Image Grid.Row="2" Grid.Column="2" Source="tab2_discover_placestovisit_example1.png" HeightRequest="128" Aspect="Fill"/>
+            <Image Grid.Row="2" Grid.Column="3" Source="tab2_discover_placestovisit_example2.png" HeightRequest="128" Aspect="Fill"/>
+
+            <Image Grid.Row="3" Grid.Column="0" Source="tab2_discover_placestovisit_example2.png" HeightRequest="128" Aspect="Fill"/>
+            <Image Grid.Row="3" Grid.Column="1" Source="tab2_discover_placestovisit_example1.png" HeightRequest="128" Aspect="Fill"/>
+            <Image Grid.Row="3" Grid.Column="2" Source="tab2_discover_placestovisit_example2.png" HeightRequest="128" Aspect="Fill"/>
+            <Image Grid.Row="3" Grid.Column="3" Source="tab2_discover_placestovisit_example1.png" HeightRequest="128" Aspect="Fill"/>
+
+
+        </Grid>
     </StackLayout>
+    
+    
 </ContentView>
