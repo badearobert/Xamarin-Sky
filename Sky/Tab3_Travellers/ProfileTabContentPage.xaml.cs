@@ -18,10 +18,12 @@ namespace Sky.Tab3_Travellers
             Favourites = 1,
             Gallery = 2
         };
+        public int ColumnSelected { get; set; }
         private Page currentPage = Page.Gallery;
         public ProfileTabContentPage()
         {
             InitializeComponent();
+            BindingContext = this;
             LoadContent(Page.About);
         }
 
@@ -42,6 +44,8 @@ namespace Sky.Tab3_Travellers
             Togglebutton(currentPage, false);
 
             currentPage = newPage;
+            ColumnSelected = (int)currentPage;
+            System.Diagnostics.Debug.WriteLine("Column selected is " + ColumnSelected);
             Togglebutton(currentPage, true);
 
             MyStackLayout.Children.Clear();
