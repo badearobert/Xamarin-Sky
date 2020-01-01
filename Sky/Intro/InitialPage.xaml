@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:backgroundcolor="clr-namespace:Sky.Common.BackgroundColor"
              mc:Ignorable="d"
              x:Class="Sky.Intro.InitialPage">
     <ScrollView>
@@ -23,9 +24,12 @@
                 </magic:GradientView.GradientSource>
             </magic:GradientView>
         </StackLayout>
-        <Image Grid.Row="0" Grid.RowSpan="3" Source="backgroundimage.png" Aspect="Fill"
+
+         <!--<backgroundcolor:GradientWrapper Grid.Row="0" Grid.RowSpan="3" Angle="180" StartColor="#301545" EndColor="#261136"/>
+          -->
+            <Image Grid.Row="0" Grid.RowSpan="3" Source="backgroundimage.png" Aspect="Fill"
                HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-        <Label Grid.Row="0" Text="sky" TextColor="#4728A0" FontSize="100" VerticalOptions="End" HorizontalOptions="Center"/>
+            <Label Grid.Row="0" Text="sky" TextColor="#4728A0" FontSize="100" VerticalOptions="End" HorizontalOptions="Center"/>
  
         <Label Grid.Row="1" Margin="0,20" Text="Your travel companion." 
                VerticalOptions="Center" HorizontalOptions="Center"

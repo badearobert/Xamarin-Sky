@@ -3,7 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:tabs="clr-namespace:Sharpnado.Presentation.Forms.CustomViews.Tabs;assembly=Sharpnado.Presentation.Forms"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
              mc:Ignorable="d"
              x:Class="Sky.Tab3_Travellers.TravellersBasePage">
+
+
+    <Grid ColumnSpacing="0" RowSpacing="0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <StackLayout Spacing="0" Grid.Row="0" Grid.RowSpan="5">
+            <magic:GradientView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <magic:GradientView.GradientSource>
+                    <magic:LinearGradient Angle="180">
+                        <magic:GradientStop Color="#261136" Offset="0" />
+                        <magic:GradientStop Color="#261136" Offset="1" />
+                    </magic:LinearGradient>
+                </magic:GradientView.GradientSource>
+            </magic:GradientView>
+        </StackLayout>
+
+        <Button Grid.Column="0" Text="ButtonPress_About" Clicked="ButtonPress_About"/>
+
+
+    </Grid>
 
 </ContentPage>

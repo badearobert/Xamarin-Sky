@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sharpnado.Presentation.Forms.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,19 @@ namespace Sky.Tab3_Travellers
         public TravellersBasePage()
         {
             InitializeComponent();
+            
+        }
+
+        private void ButtonPress_About(object sender, EventArgs e)
+        {
+            Application.Current.MainPage.Navigation.PushAsync(new ProfileTabContentPage());
+            /*
+            MyStackLayout.Children.Clear();
+            MyStackLayout.Children.Add(new Label()
+            {
+                BackgroundColor = Color.Aqua,
+                Text = "from about"
+            });*/
         }
     }
 }
