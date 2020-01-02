@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:customviews="clr-namespace:Sky.Common.CustomViews"
              mc:Ignorable="d"
              x:Class="Sky.Tab2_Discover.FullPlaceContentPage">
 
@@ -37,9 +38,11 @@
             </StackLayout>
 
 
+           
             <StackLayout Orientation="Vertical" >
                 
                 <StackLayout Orientation="Vertical">
+
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*" />
@@ -50,14 +53,14 @@
                             <ColumnDefinition Width="4*"/>
                             <ColumnDefinition Width="6*"/>
                         </Grid.ColumnDefinitions>
-
+                        
                         <Image x:Name="Background_Image" Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="2"
                        Source="tab2_discover_placestovisit_example4.png"
                        Aspect="AspectFill"
                        WidthRequest="375"
                        HeightRequest="342"
                        />
-
+                        <customviews:BackButton/>
                         <StackLayout 
                         Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
                         Orientation="Vertical" BackgroundColor="#272727">

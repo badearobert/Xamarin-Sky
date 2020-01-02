@@ -15,6 +15,7 @@ namespace Sky.Tab2_Discover
     {
         public FullPlaceContentPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
 

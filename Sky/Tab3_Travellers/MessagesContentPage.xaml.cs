@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Sky.Tab2_Discover
+namespace Sky.Tab3_Travellers
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class FullArticleContentPage : ContentPage
+    public partial class MessagesContentPage : ContentPage
     {
-        public FullArticleContentPage()
+        public MessagesContentPage()
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();

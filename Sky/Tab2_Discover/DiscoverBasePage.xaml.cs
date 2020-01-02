@@ -14,6 +14,7 @@ namespace Sky.Tab2_Discover
     {
         public DiscoverBasePage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
         protected override void OnAppearing()

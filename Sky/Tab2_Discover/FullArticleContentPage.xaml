@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:customviews="clr-namespace:Sky.Common.CustomViews"
              mc:Ignorable="d"
              x:Class="Sky.Tab2_Discover.FullArticleContentPage">
 
@@ -13,14 +14,13 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-                    <RelativeLayout>
-                        <Image x:Name="BackgroundImage" Grid.Row="0" 
+                    <Image x:Name="BackgroundImage" Grid.Row="0" 
                                Source="tab2_discover_article_example1.png" 
                                Opacity="0.8"
                                Aspect="AspectFill"
-                               WidthRequest="375" HeightRequest="256"
                                VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
-
+                    <customviews:BackButton/>
+                    <RelativeLayout>
                         <StackLayout Orientation="Horizontal"
                                      Margin="32,-72,0,0"
                                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, ElementName=BackgroundImage, Property=Height, Factor=1}"
@@ -33,9 +33,6 @@
                                 <Label Text="THINGS TO DO" TextColor="White" FontSize="11" Opacity="60" VerticalOptions="StartAndExpand" VerticalTextAlignment="Center"/>
                             </StackLayout>
                         </StackLayout>
-
-
-
                     </RelativeLayout>
         </Grid>
         </StackLayout>

@@ -16,6 +16,7 @@ namespace Sky.Tab1_Travel
         private Hotel myHotel;
         public TravelBasePage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             myHotel = new Hotel() { Name = "The Whateeever Hotel", Location = "63 W 38Th St, New York , NY 10018" };
             //Whatever1.BindingContext = myHotel;
@@ -23,6 +24,7 @@ namespace Sky.Tab1_Travel
         }
         public TravelBasePage(string title)
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             Title = title;
         }

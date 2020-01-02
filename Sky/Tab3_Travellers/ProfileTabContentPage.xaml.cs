@@ -12,24 +12,28 @@ namespace Sky.Tab3_Travellers
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfileTabContentPage : ContentPage
     {
+        ProfileTabViewModel viewModel = new ProfileTabViewModel();
         private enum Page
         {
             About = 0, 
             Favourites = 1,
             Gallery = 2
         };
-        public int ColumnSelected { get; set; }
+
         private Page currentPage = Page.Gallery;
         public ProfileTabContentPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-            BindingContext = this;
+            
+            ButtonBottomLine.BindingContext = viewModel;
+            CustomViewBackButton.BindingContext = this;
             LoadContent(Page.About);
         }
 
         private View Create(Page newPage)
         {
-            switch (currentPage)
+            switch (newPage)
             {
                 case Page.About: return new TabAbout_ContentView();
                 case Page.Favourites: return new TabFavourites_ContentView(); 
@@ -41,18 +45,18 @@ namespace Sky.Tab3_Travellers
         private void LoadContent(Page newPage)
         {
             if (currentPage == newPage) return;
-            Togglebutton(currentPage, false);
+            UpdateButtonTextColor(currentPage, false);
 
             currentPage = newPage;
-            ColumnSelected = (int)currentPage;
-            System.Diagnostics.Debug.WriteLine("Column selected is " + ColumnSelected);
-            Togglebutton(currentPage, true);
+            viewModel.ColumnSelected = (int)currentPage;
+            System.Diagnostics.Debug.WriteLine("Column selected is " + viewModel.ColumnSelected);
+            UpdateButtonTextColor(currentPage, true);
 
             MyStackLayout.Children.Clear();
             MyStackLayout.Children.Add(Create(currentPage));
         }
 
-        private void Togglebutton(Page newPage, bool enabled)
+        private void UpdateButtonTextColor(Page newPage, bool enabled)
         {
             Color newColor = enabled ? Color.White : Color.FromHex("#A648EB");
             switch (newPage)
@@ -75,6 +79,11 @@ namespace Sky.Tab3_Travellers
         private void ButtonPress_Gallery(object sender, EventArgs e)
         {
             LoadContent(Page.Gallery);
+        }
+
+        private async void ButtonPress_MessageUser(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MessagesContentPage());
         }
     }
 }
