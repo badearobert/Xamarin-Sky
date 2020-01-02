@@ -27,7 +27,6 @@ namespace Sky.Tab3_Travellers
             InitializeComponent();
             
             ButtonBottomLine.BindingContext = viewModel;
-            CustomViewBackButton.BindingContext = this;
             LoadContent(Page.About);
         }
 
