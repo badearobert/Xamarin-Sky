@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Sky.Tab4_Favorites
+namespace Sky.Tab4_Favorites.CustomContentView
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class FavoritesTabbedPage : TabbedPage
+    public partial class TabFavourites_ContentView : ContentView
     {
-        public FavoritesTabbedPage()
+        public TabFavourites_ContentView()
         {
             InitializeComponent();
         }

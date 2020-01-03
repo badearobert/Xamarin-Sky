@@ -23,6 +23,9 @@
     <Compile Update="Common\CustomViews\BackButton.xaml.cs">
       <DependentUpon>BackButton.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Tab4_Favorites\FavoritesBasePage.xaml.cs">
+      <DependentUpon>FavoritesBasePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -80,7 +83,13 @@
     <EmbeddedResource Update="Tab3_Travellers\TravellersNavigationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Tab4_Favorites\FavoritesTabbedPage.xaml">
+    <EmbeddedResource Update="Tab4_Favorites\CustomContentView\TabFavourites_ContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Tab4_Favorites\CustomContentView\TabSettings_ContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Tab4_Favorites\FavoritesBasePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -13,6 +13,6 @@
     <tab1_travel:TravelNavigationPage IconImageSource="tab1_travel.png"/>
     <tab2_discover:DiscoverNavigationPage IconImageSource="tab2_discover.png"/>
     <tab3_travellers:TravellersNavigationPage IconImageSource="tab3_travellers.png"/>
-    <tab4_favorites:FavoritesTabbedPage IconImageSource="tab4_favorites.png"/>
+    <tab4_favorites:FavoritesBasePage IconImageSource="tab4_favorites.png"/>
 
 </TabbedPage>
