@@ -34,6 +34,7 @@ namespace Sky.Tab4_Favorites
             UpdateButtonTextColor(currentPage, false);
 
             currentPage = newPage;
+            SearchBar.IsVisible = (currentPage == Page.Favourites); 
             UpdateButtonTextColor(currentPage, true);
 
             MyStackLayout.Children.Clear();

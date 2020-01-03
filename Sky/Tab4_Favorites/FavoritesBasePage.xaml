@@ -30,8 +30,8 @@
 
     <Grid RowSpacing="0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="3*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <StackLayout Grid.Row="0" x:Name="TopBackground">
@@ -61,20 +61,32 @@
         <StackLayout Grid.Row="0" Orientation="Vertical">
             <Grid RowSpacing="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
-                <Image Grid.Row="0" Source="tab3_profiletab_profilepicture.png"
-                       WidthRequest="64" HeightRequest="64" VerticalOptions="Start" HorizontalOptions="End"/>
-                <Label Grid.Row="1" Text="Sarah Parmenter" TextColor="White" FontSize="14" HorizontalOptions="Start"/>
-                <Label Grid.Row="2" Text="LONDON, ENGLAND" TextColor="White" FontSize="10" HorizontalOptions="Start"/>
-
+                <StackLayout Grid.Row="0">
+                <Image Source="tab3_profiletab_profilepicture.png"
+                       WidthRequest="100" HeightRequest="100" 
+                       VerticalOptions="Start" HorizontalOptions="EndAndExpand"
+                       />
+                </StackLayout>
+                <StackLayout Grid.Row="1">
+                    <Label Text="Sarah Parmenter" TextColor="Red" FontSize="20" HorizontalOptions="Start"/>
+                </StackLayout>
+                <StackLayout Grid.Row="2">
+                    <Label Text="LONDON, ENGLAND" TextColor="Red" FontSize="10" HorizontalOptions="Start"/>
+                 </StackLayout>
+                 <StackLayout Grid.Row="3" x:Name="SearchBar">
+                    <BoxView BackgroundColor="Red"/>
+                </StackLayout>
             </Grid>
         </StackLayout>
 
+       
+        
         <StackLayout Grid.Row="1" Orientation="Vertical">
             <Grid ColumnSpacing="0" RowSpacing="0">
                 <Grid.RowDefinitions>
