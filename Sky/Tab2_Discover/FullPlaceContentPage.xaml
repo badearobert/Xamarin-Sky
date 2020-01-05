@@ -80,7 +80,9 @@
 
                         <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Vertical" Margin="30,30,0,0">
                             <Label Text="$25.50" TextColor="#8BC34A " FontSize="30" HorizontalTextAlignment="Center"/>
-                            <Button BackgroundColor="#431C60" TextColor="White" Text="PICK A DATE" Pressed="ButtonPressed_DatePicker"></Button>
+                            <DatePicker x:Name="MainDatePicker" MinimumDate="1/1/2020" MaximumDate="12/31/2020"
+                                        DateSelected="MainDatePicker_DateSelected" IsVisible="False"/>
+                            <Button x:Name="MainDatePickerInfo"  BackgroundColor="#431C60" TextColor="White" Text="PICK A DATE" Pressed="ButtonPressed_DatePicker"></Button>
 
                         </StackLayout>
                         <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Vertical" Margin="20,20,0,20">

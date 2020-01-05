@@ -30,7 +30,7 @@ namespace Sky.Tab2_Discover
 
         private void ButtonPressed_DatePicker(object sender, EventArgs e)
         {
-            PopupHelper.ShowAlertDialog("TravelBasePage", "Button pressed - Pick a date", this);
+            MainDatePicker.Focus();
         }
 
         private void ButtonPressed_AddFavorite(object sender, EventArgs e)
@@ -40,6 +40,11 @@ namespace Sky.Tab2_Discover
         private void SwitchPressedFavourite(object sender, EventArgs e)
         {
             viewModel.Toggle();
+        }
+
+        private void MainDatePicker_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            MainDatePickerInfo.Text = e.NewDate.ToString();
         }
     }
 }
