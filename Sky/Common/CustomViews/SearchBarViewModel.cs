@@ -6,11 +6,11 @@ using System.Text;
 
 namespace Sky.Common.CustomViews
 {
-    public class SearchBarViewModel
+    public class SearchBarViewModel : INotifyPropertyChanged
     {
-        public SearchBarViewModel()
+        public SearchBarViewModel(string text = "")
         {
-            
+            searchText = text;
         }
         private string searchText;
         public string SearchBarText

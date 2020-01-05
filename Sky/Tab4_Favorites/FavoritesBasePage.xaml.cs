@@ -16,8 +16,8 @@ namespace Sky.Tab4_Favorites
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FavoritesBasePage : ContentPage
     {
-        TabBarViewModel viewModel = new TabBarViewModel();
-        SearchBarViewModel searchBarViewModel = new SearchBarViewModel();
+        TabBarViewModel tabBarViewModel = new TabBarViewModel();
+        SearchBarViewModel searchBarViewModel = new SearchBarViewModel("Search a favourite");
         private enum Page
         {
             Favourites = 0,
@@ -29,9 +29,8 @@ namespace Sky.Tab4_Favorites
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-            ButtonBottomLine.BindingContext = viewModel;
+            ButtonBottomLine.BindingContext = tabBarViewModel;
             SearchBar.BindingContext = searchBarViewModel;
-            searchBarViewModel.SearchBarText = "Search a favourite";
 
             LoadContent(Page.Favourites);
         }
@@ -42,7 +41,7 @@ namespace Sky.Tab4_Favorites
             UpdateButtonTextColor(currentPage, false);
 
             currentPage = newPage;
-            viewModel.ColumnSelected = ((int)currentPage);
+            tabBarViewModel.ColumnSelected = ((int)currentPage);
             SearchBarParent.IsVisible = (currentPage == Page.Favourites);
             UpdateButtonTextColor(currentPage, true);
 

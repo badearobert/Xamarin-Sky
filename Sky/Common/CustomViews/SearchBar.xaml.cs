@@ -12,11 +12,9 @@ namespace Sky.Common.CustomViews
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SearchBar : ContentView
     {
-        private SearchBarViewModel viewModel = new SearchBarViewModel();
         public SearchBar()
         {
             InitializeComponent();
-            SearchTextParent.BindingContext = viewModel;
         }
     }
 }

@@ -13,14 +13,13 @@ namespace Sky.Tab2_Discover
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DiscoverBasePage : ContentPage
     {
-        SearchBarViewModel searchBarViewModel = new SearchBarViewModel();
+        SearchBarViewModel searchBarViewModel = new SearchBarViewModel("Type a place");
 
         public DiscoverBasePage()
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             CustomSearchBar.BindingContext = searchBarViewModel;
-            searchBarViewModel.SearchBarText = "Type a place";
         }
         protected override void OnAppearing()
         {
