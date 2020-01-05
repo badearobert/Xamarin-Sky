@@ -8,6 +8,10 @@
              mc:Ignorable="d"
              x:Class="Sky.Tab2_Discover.FullPlaceContentPage">
 
+    <ContentPage.BindingContext>
+        <customviews:SwitchButton/>
+    </ContentPage.BindingContext>
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Button" x:Key="AvailableTimeButtonStyle">
@@ -64,15 +68,12 @@
                         <StackLayout 
                         Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
                         Orientation="Vertical" BackgroundColor="#272727">
-                            <Image Source="tab2_discover_places_button_addfavorites.png"
-                                   Grid.Row="0" Grid.Column="1"
-                                   Margin="0,-32,32,0"
-                                   HorizontalOptions="End" VerticalOptions="End"
-                                   WidthRequest="64" HeightRequest="64">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="ButtonPressed_AddFavorite"/>
-                                </Image.GestureRecognizers>
-                            </Image>
+
+                            <customviews:SwitchButton x:Name="SwitchButtonFavorite"
+                                                       Grid.Row="0" Grid.Column="1"
+                                                       Margin="0,-32,32,0"
+                                                       HorizontalOptions="End" VerticalOptions="End"
+                                                       WidthRequest="64" HeightRequest="64"/>
                         </StackLayout>
 
 

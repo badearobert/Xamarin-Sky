@@ -8,13 +8,16 @@ namespace Sky.Common.CustomViews
 {
     public class SwitchButtonViewModel : INotifyPropertyChanged
     {
-        public SwitchButtonViewModel(bool initial_state)
+        private string Source_toggled_on = "";
+        private string Source_toggled_off = "";
+        private bool State;
+
+        public SwitchButtonViewModel(string view_enabled, string view_disabled, bool initial_state)
         {
             State = initial_state;
+            Source_toggled_on = view_enabled;
+            Source_toggled_off = view_disabled;
         }
-        private string Source_toggled_on = "common_switch_enabled.png";
-        private string Source_toggled_off = "common_switch_disabled.png";
-        private bool State;
 
         public event PropertyChangedEventHandler PropertyChanged;
 

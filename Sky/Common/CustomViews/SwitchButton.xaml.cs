@@ -13,16 +13,16 @@ namespace Sky.Common.CustomViews
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SwitchButton : ContentView
     {
-        SwitchButtonViewModel viewModel = new SwitchButtonViewModel(false);
+        public delegate void SwitchPressedDelegate(object sender, EventArgs e);
+        public event SwitchPressedDelegate OnSwitchPressed;
         public SwitchButton()
         {
             InitializeComponent();
-            BindingContext = viewModel;  
         }
 
         private void SwitchPressed(object sender, EventArgs e)
         {
-            viewModel.Toggle();
+            OnSwitchPressed?.Invoke(this, e);
         }
     }
 }
