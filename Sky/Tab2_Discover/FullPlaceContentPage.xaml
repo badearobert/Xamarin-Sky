@@ -155,10 +155,9 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
 
-                        <StackLayout Spacing="0" Grid.Row="0" Grid.RowSpan="2">
+                        <StackLayout Spacing="0" Grid.Row="0">
                             <magic:GradientView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                                 <magic:GradientView.GradientSource>
                                     <magic:LinearGradient Angle="270">
@@ -167,22 +166,21 @@
                                     </magic:LinearGradient>
                                 </magic:GradientView.GradientSource>
                             </magic:GradientView>
+                        </StackLayout>
+                        
+                        <StackLayout Orientation="Vertical" x:Name="BookingLabelParent">
+                            <Label Margin="0,5,0,0" Grid.Row="0"
+                               x:Name="BookingLabel"
+                               Text="BOOK THIS FOR $25.50" TextColor="White" 
+                               VerticalOptions="Center" HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="ButtonPressed_BookPlace"/>
                             </StackLayout.GestureRecognizers>
                         </StackLayout>
-
-
-                        <Label Margin="0,5,0,0" Grid.Row="0" Text="BOOK THIS FOR" 
-                               TextColor="White" 
-                               VerticalOptions="Center" HorizontalOptions="Center"
-                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                        <Label Grid.Row="1" Text="$25.50" TextColor="White" FontAttributes="Bold" 
-                               VerticalOptions="Center" HorizontalOptions="Center"
-                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                     </Grid>
                 </StackLayout>
             </StackLayout>
         </Grid>
     </ScrollView>
-</ContentPage>
+</ContentPage> 
