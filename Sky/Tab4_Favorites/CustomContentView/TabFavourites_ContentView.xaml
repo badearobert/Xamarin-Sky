@@ -9,7 +9,7 @@
 
 
 
-
+    <ScrollView>
     <StackLayout Orientation="Vertical">
         <Grid>
             <Grid.RowDefinitions>
@@ -61,4 +61,5 @@
             </StackLayout>
         </Grid>
     </StackLayout>
+    </ScrollView>
 </ContentView>

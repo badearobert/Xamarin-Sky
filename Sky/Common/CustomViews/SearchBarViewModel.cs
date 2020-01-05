@@ -4,18 +4,23 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace Sky.Tab3_Travellers
+namespace Sky.Common.CustomViews
 {
-    public class ProfileTabViewModel : INotifyPropertyChanged
+    public class SearchBarViewModel
     {
-        private int columnSelected = 2;
-        public int ColumnSelected 
+        public SearchBarViewModel()
         {
-            get { return columnSelected; }
-            set { columnSelected = value; OnPropertyChanged(); }
+            
+        }
+        private string searchText;
+        public string SearchBarText
+        {
+            get { return searchText; } 
+            set { searchText = value; OnPropertyChanged(); }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
 
         void OnPropertyChanged([CallerMemberName] string name = "")
         {

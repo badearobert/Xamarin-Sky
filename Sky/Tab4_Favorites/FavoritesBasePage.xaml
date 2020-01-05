@@ -5,9 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:customviews="clr-namespace:Sky.Common.CustomViews"
              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:viewmodel="clr-namespace:Sky.Tab4_Favorites.ViewModel"
              mc:Ignorable="d"
              x:Class="Sky.Tab4_Favorites.FavoritesBasePage">
 
+
+    <ContentPage.BindingContext>
+        <viewmodel:TabBarViewModel/>
+    </ContentPage.BindingContext>
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -73,14 +78,14 @@
                        VerticalOptions="Start" HorizontalOptions="EndAndExpand"
                        />
                 </StackLayout>
-                <StackLayout Grid.Row="1">
-                    <Label Text="Sarah Parmenter" TextColor="Red" FontSize="20" HorizontalOptions="Start"/>
+                <StackLayout Grid.Row="1" Margin="10,0">
+                    <Label Text="Sarah Parmenter" TextColor="White" FontSize="20" HorizontalOptions="Start" VerticalOptions="Center"/>
                 </StackLayout>
-                <StackLayout Grid.Row="2">
-                    <Label Text="LONDON, ENGLAND" TextColor="Red" FontSize="10" HorizontalOptions="Start"/>
+                <StackLayout Grid.Row="2" Margin="10,5,0,10">
+                    <Label Text="LONDON, ENGLAND" TextColor="White" FontSize="10" HorizontalOptions="Start" VerticalOptions="Center"/>
                  </StackLayout>
-                 <StackLayout Grid.Row="3" x:Name="SearchBar">
-                    <BoxView BackgroundColor="Red"/>
+                <StackLayout Grid.Row="3" x:Name="SearchBarParent" Margin="10,5,10,10">
+                    <customviews:SearchBar x:Name="SearchBar"/>
                 </StackLayout>
             </Grid>
         </StackLayout>
@@ -106,8 +111,8 @@
                     </StackLayout>
                 </StackLayout>
                 <StackLayout x:Name="ButtonBottomLine" Orientation="Vertical" BackgroundColor="#431C60" 
-                             Grid.Row="1" Grid.Column="0">
-                    <BoxView BackgroundColor="Red" HeightRequest="1" Margin="0"/>
+                             Grid.Row="1" Grid.Column="{Binding ColumnSelected}">
+                    <BoxView BackgroundColor="White" HeightRequest="1" Margin="0"/>
                 </StackLayout>
 
                 <ScrollView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">

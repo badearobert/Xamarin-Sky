@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sky.Common.CustomViews;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,14 @@ namespace Sky.Tab2_Discover
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DiscoverBasePage : ContentPage
     {
+        SearchBarViewModel searchBarViewModel = new SearchBarViewModel();
+
         public DiscoverBasePage()
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
+            CustomSearchBar.BindingContext = searchBarViewModel;
+            searchBarViewModel.SearchBarText = "Type a place";
         }
         protected override void OnAppearing()
         {
