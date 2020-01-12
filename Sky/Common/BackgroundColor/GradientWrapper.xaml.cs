@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,7 +16,7 @@ namespace Sky.Common.BackgroundColor
     {
         public static readonly BindableProperty AngleProperty = BindableProperty.Create("Angle", typeof(double), typeof(GradientWrapper), 0.0);
         public static readonly BindableProperty StartColorProperty = BindableProperty.Create("StartColor", typeof(Color), typeof(GradientWrapper), Color.Black);
-        public static readonly BindableProperty EndColorProperty = BindableProperty.Create("EndColor", typeof(Color), typeof(GradientWrapper), Color.Black);     
+        public static readonly BindableProperty EndColorProperty = BindableProperty.Create("EndColor", typeof(Color), typeof(GradientWrapper), Color.Black);
 
         public double Angle
         {

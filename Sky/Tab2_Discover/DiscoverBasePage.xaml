@@ -88,7 +88,7 @@
                     </StackLayout>
                     <StackLayout Orientation="Vertical" Margin="10,60,10,10">
                         <!--<Label Text="Discover" TextColor="White" FontSize="18" FontFamily="Runda"  Margin="30,0"/>-->
-                        <customviews:SearchBar x:Name="CustomSearchBar" />
+                        <customviews:SearchBar x:Name="CustomSearchBar"/>
                     </StackLayout>
                 </Grid>
 
@@ -164,7 +164,7 @@
 
                     <!-- Content cards - one per row - new page +click -->
 
-                <StackLayout x:Name="Inner_Article_Big" Orientation="Vertical" BackgroundColor="White">
+                <StackLayout x:Name="Inner_Article_Big" Orientation="Vertical" BackgroundColor="White" Margin="0,10">
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Inner_Article_Big_Tapped"/>
                     </StackLayout.GestureRecognizers>
@@ -178,17 +178,17 @@
 
                         <Image Grid.Row="0" Source="tab2_discover_article_example1.png" Aspect="AspectFill"/>
 
-                        <StackLayout Grid.Row="1" Orientation="Vertical">
-                            <Grid>
+                        <StackLayout Grid.Row="1" Orientation="Vertical" Padding="20">
+                            <Grid RowSpacing="30">
                                 <Grid.RowDefinitions>
                                         <RowDefinition Height="*"/>
                                         <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
                                 <Label Grid.Row="0" Text="How to find the best photography spots in Brooklyn." TextColor="Black"
-                                        Margin="20"
+                                        Margin="20,0"
                                        FontFamily="Runda" FontSize="20"/>
 
-                                    <Label Grid.Row="1"  Margin="20,0"
+                                    <Label Grid.Row="1"  Margin="20,0" 
                                        Text="Exceptteus sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt" 
                                            TextColor="Gray"
                                            FontFamily="Runda" FontSize="14"/>

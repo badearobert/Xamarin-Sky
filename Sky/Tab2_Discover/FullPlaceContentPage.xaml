@@ -59,10 +59,11 @@
                         </Grid.ColumnDefinitions>
                         
                         <Image x:Name="Background_Image" Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="2"
-                       Source="tab2_discover_placestovisit_example4.png"
-                       Aspect="AspectFill"
-                       WidthRequest="375"
-                       HeightRequest="342"
+                               Source="tab2_discover_placestovisit_example4.png"
+                               Aspect="AspectFill"
+                               WidthRequest="375"
+                               HeightRequest="342"
+                               Opacity="0.8"
                        />
                         <customviews:BackButton/>
                         <StackLayout 
@@ -70,13 +71,25 @@
                         Orientation="Vertical" BackgroundColor="#272727">
 
                             <customviews:SwitchButton x:Name="SwitchButtonFavorite"
-                                                       Grid.Row="0" Grid.Column="1"
-                                                       Margin="0,-32,32,0"
-                                                       HorizontalOptions="End" VerticalOptions="End"
-                                                       WidthRequest="64" HeightRequest="64"/>
+                                                      Grid.Row="0" Grid.Column="1"
+                                                      Margin="0,-32,32,0"
+                                                      HorizontalOptions="End" VerticalOptions="End"
+                                                      WidthRequest="64" HeightRequest="64"/>
                         </StackLayout>
 
 
+                        <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                                     Orientation="Vertical" Margin="30,0" 
+                                     VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand">
+                            <Label Text="Lady Liberty" TextColor="White" FontSize="24"  FontFamily="Runda"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="tab2_discover_rating.png" HorizontalOptions="Start"/>
+                                <Label Text="Downtown, NYC" TextColor="#AAB5E0" 
+                                       FontSize="13"  FontFamily="Runda" FontAttributes="Bold"
+                                       />
+
+                            </StackLayout>
+                        </StackLayout>         
 
                         <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Vertical" Margin="30,30,0,0">
                             <Label Text="$25.50" TextColor="#8BC34A " FontSize="30" HorizontalTextAlignment="Center"/>
@@ -171,9 +184,16 @@
                         <StackLayout Orientation="Vertical" x:Name="BookingLabelParent">
                             <Label Margin="0,5,0,0" Grid.Row="0"
                                x:Name="BookingLabel"
-                               Text="BOOK THIS FOR $25.50" TextColor="White" 
+                               TextColor="White" 
                                VerticalOptions="Center" HorizontalOptions="Center"
-                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="BOOK THIS FOR &#10;"/>
+                                        <Span Text="$25.50" FontAttributes="Bold"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="ButtonPressed_BookPlace"/>
                             </StackLayout.GestureRecognizers>
