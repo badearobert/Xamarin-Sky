@@ -9,7 +9,6 @@
     <StackLayout Orientation="Horizontal" HeightRequest="30" BackgroundColor="White" Padding="15,10">
         
         <Image Source="common_searchimage.png"
-                   WidthRequest="20" HeightRequest="20" 
                    VerticalOptions="Center" HorizontalOptions="Start"/>
         
             <StackLayout x:Name="SearchTextParent" Orientation="Horizontal" Margin="10,0"
@@ -18,7 +17,6 @@
             </StackLayout>
         
         <Image Source="common_searchbyvoice.png"
-                   WidthRequest="20" HeightRequest="20" 
                    VerticalOptions="Center" HorizontalOptions="End"/>
     </StackLayout>
 </ContentView>
