@@ -26,6 +26,9 @@
     <Compile Update="Common\CustomViews\SwitchButton.xaml.cs">
       <DependentUpon>SwitchButton.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Tab1_Travel\HeaderResourceDictionary.xaml.cs">
+      <DependentUpon>HeaderResourceDictionary.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Tab4_Favorites\FavoritesBasePage.xaml.cs">
       <DependentUpon>FavoritesBasePage.xaml</DependentUpon>
     </Compile>
@@ -33,6 +36,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Common\BackgroundColor\GradientWrapper.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Common\CommonResourceDictionary.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Common\CustomViews\BackButton.xaml">
@@ -51,6 +57,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Intro\SignUpPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Tab1_Travel\HeaderResourceDictionary.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Tab1_Travel\TravelBasePage.xaml">

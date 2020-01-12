@@ -6,6 +6,12 @@
              mc:Ignorable="d"
              x:Class="Sky.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <!--<ResourceDictionary.MergedDictionaries>
+                <local:HeaderResourceDictionary/>
+            </ResourceDictionary.MergedDictionaries>-->
 
+            <ResourceDictionary Source="Common/CommonResourceDictionary.xaml"/>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
