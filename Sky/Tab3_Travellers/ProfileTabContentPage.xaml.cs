@@ -13,6 +13,7 @@ namespace Sky.Tab3_Travellers
     public partial class ProfileTabContentPage : ContentPage
     {
         ProfileTabViewModel viewModel = new ProfileTabViewModel();
+        private bool following = false;
         private enum Page
         {
             About = 0, 
@@ -83,6 +84,14 @@ namespace Sky.Tab3_Travellers
         private async void ButtonPress_MessageUser(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MessagesContentPage());
+        }
+
+        private void ButtonPress_Follow(object sender, EventArgs e)
+        {
+            following = !following;
+            FollowButton.Text = following ? "FOLLOWING" : "FOLLOW";
+            FollowButton.BackgroundColor = Color.FromHex(following ? "#5371E6": "#7B1FA2");
+            LoadContent(following ? Page.About : Page.Favourites);
         }
     }
 }

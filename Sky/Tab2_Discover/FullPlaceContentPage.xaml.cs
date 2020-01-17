@@ -49,7 +49,7 @@ namespace Sky.Tab2_Discover
 
         private void MainDatePicker_DateSelected(object sender, DateChangedEventArgs e)
         {
-            MainDatePickerInfo.Text = e.NewDate.ToString();
+            MainDatePickerInfo.Text = e.NewDate.Date.ToShortDateString();
         }
     }
 }
