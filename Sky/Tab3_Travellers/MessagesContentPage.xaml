@@ -91,11 +91,16 @@
 
 
         <StackLayout Spacing="0" Grid.Row="1" Orientation="Vertical" VerticalOptions="Fill" BackgroundColor="#261136">
-            <Label Text="middle text"/>
-            <Label Text="middle text"/>
-            <Label Text="middle text"/>
-            <Label Text="middle text"/>
-            <Label Text="middle text"/>
+            <ScrollView>
+                <Grid RowSpacing="5" Margin="20,20,20,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout x:Name="MessagesView"/>
+                </Grid>
+            </ScrollView>
         </StackLayout>
 
         <StackLayout Spacing="0" Grid.Row="2" Orientation="Vertical" VerticalOptions="End" BackgroundColor="#431C60">
